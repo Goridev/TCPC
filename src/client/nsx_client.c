@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
    
     // assign IP, PORT
     client.servaddr.sin_family = AF_INET;
-    client.servaddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    client.servaddr.sin_addr.s_addr = inet_addr(HOST);
     client.servaddr.sin_port = htons(PORT);
    
     // connect the client socket to server socket

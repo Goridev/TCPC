@@ -5,11 +5,23 @@
 #include <unistd.h>
 #include <sys/socket.h>
 
+
+#include <errno.h> 
+#include <unistd.h>   //close 
+#include <arpa/inet.h>    //close 
+#include <sys/types.h> 
+#include <sys/socket.h> 
+#include <sys/time.h>  //FD_SET, FD_ISSET, FD_ZERO macros
+#include <netinet/in.h> 
+
 #ifndef tcp_conf_h
 #define tcp_conf_h
 
+#define TRUE   1 
+#define FALSE  0 
 #define MAX 80
 #define PORT 8080
+#define HOST "127.0.0.1"
 #define SA struct sockaddr
 
 

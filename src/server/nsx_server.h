@@ -13,7 +13,6 @@ struct nsx_server {
     nsx_server (*loop)(nsx_server *);
     nsx_server (*close)(nsx_server *);
 };
-// typedef nsx_server *p_nsx_server;
 
 nsx_server nsx_server_listen(nsx_server *self)
 {
@@ -67,8 +66,7 @@ nsx_server nsx_server_loop(nsx_server *self)
         bzero(buff, MAX);
         n = 0;
         // copy server message in the buffer
-        while ((buff[n++] = getchar()) != '\n')
-            ;
+        while ((buff[n++] = getchar()) != '\n');
    
         // and send that buffer to client
         write(self->connfd, buff, sizeof(buff));
