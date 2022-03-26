@@ -2,6 +2,15 @@
 #include <sys/types.h>
 #include "../core/nsx_cmd.h"
 
+typedef struct multi multi;
+struct multi {
+    struct sockaddr_in address;
+    fd_set readfds;
+    char *buffer;
+    char *response;
+    int opt, master_socket, addrlen, new_socket, *client_socket,max_clients, activity, i, read, sd, max_sd;
+};
+
 typedef struct nsx_server nsx_server;
 struct nsx_server {
     int sockfd,connfd,len;

@@ -21,7 +21,8 @@
 #define FALSE  0 
 #define MAX 80
 #define PORT 8080
-#define HOST "127.0.0.1"
+#define HOST "192.168.8.110"
+#define MAX_CLIENT 30
 #define SA struct sockaddr
 
 
